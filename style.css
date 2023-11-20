@@ -1,0 +1,36 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+}
+
+h3 {
+    width: 250px;
+    color: #1eff00;
+    border-bottom: 2px solid #1eff00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #66ccff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1eff00;
+}
+
+a:active {
+    background-color: #1a1a1a;
+    padding: 5px;
+}
