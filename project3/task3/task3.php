@@ -17,12 +17,11 @@
             <input type="tel" name="phone1" required>
             <p>Телефон2(если есть)</p>
             <input type="tel" name="phone2"><br>
-            <button type="submit" name="button">Отправить</button>
+            <button type="submit" name="post">Отправить</button>
         </form>
 
         <?php
-
-        if (isset($_POST['button'])) {
+        if (isset($_POST['post'])) {
             $file = 'task3.txt';
             $contact = file_get_contents($file);
             $contact = 'Имя:' . $_POST['name'] . "\n" . 'Телефон1:' . $_POST['phone1'] . "\n" . 'Телефон2:' . $_POST['phone2'] . "\n\n";
