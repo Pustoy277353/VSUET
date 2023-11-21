@@ -37,7 +37,7 @@ $inflation = 0.1;
 
 echo '<table border="1">';
 echo '<tr><th>Год</th><th>Цена</th><th>Инфляция</th></tr>';
-echo "<tr><td>$year</td><td>$price</td><td>$inflation%</td></tr>";
+echo '<tr><td>'.$year.'</td><td>'.$price.'</td><td>'. $inflation*100 .'%</td></tr>';
 
 for ($year = 2; $year != 11; $year++) {
     if ($price < 170) {
