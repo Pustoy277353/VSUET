@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 #vote, #voteResult {
     float: left;
     margin-right: 20px;
     border: 1px solid #000;
     padding: 10px;
     border-radius: 0px;
-=======
-#vote, #voteResult {
-    float: left;
-    margin-right: 20px;
-    border: 1px solid #000;
-    padding: 10px;
-    border-radius: 0px;
->>>>>>> 75452528c54d8b09eff170996b77d02d1db75cd3
 }
