@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #container {
+      width: 50px;
+      height: 50px;
+      background-color: #8234db;
+      border-radius: 5px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    const container = document.getElementById('container');
+    const radius = 120;
+    let t = 0;
+
+    function moveSquare() {
+      const x = radius * Math.cos(t);
+      const y = radius * Math.sin(t);
+
+      container.style.transform = `translate(${x}px, ${y}px)`;
+
+      t += 0.01;
+
+      requestAnimationFrame(moveSquare);
+    }
+
+    moveSquare();
+  </script>
+</body>
+</html>

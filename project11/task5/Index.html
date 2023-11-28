@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея фотографий</title>
+</head>
+<body>
+  <h1>Галерея фотографий</h1>
+  
+  <label for="photoSelect">Выберите фотографию:</label>
+  <select id="photoSelect" onchange="showPhoto()">
+    <option value="1" alt="Фотография 1">Фотография 1</option>
+    <option value="2" alt="Фотография 2">Фотография 2</option>
+    <option value="3" alt="Фотография 3">Фотография 3</option>
+    <option value="4" alt="Фотография 4">Фотография 4</option>
+  </select>
+  
+  <div id="photoContainer">
+    <img id="img" src="1.jpg" alt="Фотография 1"><br>
+  </div>
+
+  <script>
+    function showPhoto() {
+      var select = document.getElementById("photoSelect");
+      var photoContainer = document.getElementById("photoContainer");
+      var img = document.getElementById("img");
+
+      var selectedValue = select.value;
+
+      img.src = selectedValue + ".jpg";
+      img.alt = "Фотография " + selectedValue;
+    }
+  </script>
+</body>
+</html>
