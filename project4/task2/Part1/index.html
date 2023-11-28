@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="addContact" action="task2.php" method="post">
+        <label for="surname">Фамилия: </label>
+        <input type="text" id="surname" name="surname"><br>
+        <label for="email">Почта: </label>
+        <input type="text" id="email" name="email"><br>
+        <label for="tel">Телефон: </label>
+        <input type="text" id="tel" name="tel"><br>
+        <button type="submit" name="action" value="add">Добавить контакт</button>
+    </form>
+    <form id="showContacts" action="task2.php" method="post">
+        <button type="submit" name="action" value="show">Показать контакты</button>
+    </form>
+    <form id="createTabble" action="task2.php" method="post">
+        <button type="submit" name="action" value="create">Создать таблицу</button>
+    </form>
+    <form id="delTable" action="task2.php" method="post">
+        <button type="submit" name="action" value="drop">Удалить таблицу</button>
+    </form>
+</body>
+</html>
