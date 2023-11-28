@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор марки автомобиля</title>
+</head>
+<body>
+
+    <label for="carMake">Выберите марку автомобиля:</label>
+    <select id="carMake" onchange="getCarModels()">
+        <option value="">-- Выберите марку --</option>
+        <option value="toyota">Toyota</option>
+        <option value="honda">Honda</option>
+    </select>
+
+    <br>
+
+    <label for="carModel">Модель автомобиля:</label>
+    <select id="carModel" disabled>
+        <option value="">-- Выберите марку сначала --</option>
+    </select>
+
+    <script>
+        function getCarModels() {
+            var carMake = document.getElementById("carMake").value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var carModels = JSON.parse(xhr.responseText);
+                    updateCarModels(carModels);
+                }
+            };
+
+            xhr.open("GET", "get_car_models.php?make=" + carMake, true);
+            xhr.send();
+        }
+
+        function updateCarModels(models) {
+            var carModelSelect = document.getElementById("carModel");
+            carModelSelect.innerHTML = "<option value=''>-- Выберите модель --</option>";
+
+            for (var i = 0; i < models.length; i++) {
+                var option = document.createElement("option");
+                option.text = models[i];
+                option.value = models[i];
+                carModelSelect.add(option);
+            }
+
+            carModelSelect.disabled = false;
+        }
+    </script>
+
+</body>
+</html>
