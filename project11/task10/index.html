@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учёт поступления товаров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Учёт поступления товаров</h2>
+
+<table id="productTable">
+    <thead>
+        <tr>
+            <th>Наименование товара</th>
+            <th>Цена за единицу</th>
+            <th>Количество</th>
+            <th>Стоимость</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" id="total">Итого:</td>
+            <td id="totalAmount">0</td>
+        </tr>
+    </tfoot>
+</table>
+
+<form id="updateForm">
+    <label for="productName">Товар:</label>
+    <select id="productName" name="productName"></select><br>
+
+    <label for="productPrice">Цена:</label>
+    <input type="number" id="productPrice" name="productPrice" required><br>
+
+    <label for="productQuantity">Количество:</label>
+    <input type="number" id="productQuantity" name="productQuantity" required><br>
+
+    <button type="button" onclick="updateProduct()">Ввод</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

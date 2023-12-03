@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form action="php.php" method="post" onsubmit="return validateForm()">
+        Изделие:
+        <select name="furniture">
+            <option value="Шкаф">Шкаф</option>
+            <option value="Стул">Стул</option>
+            <option value="Тумба">Сервант</option>
+        </select><br>
+        Материал:
+        <select name="Material">
+            <option value="Дуб">Дуб</option>
+            <option value="Орех">Орех</option>
+            <option value="Бук">Бук</option>
+        </select><br>
+        <label for="number">Количество:</label>
+        <input type="number" name="number" id="number"><br>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+
+</html>
