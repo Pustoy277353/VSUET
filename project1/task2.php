@@ -13,12 +13,6 @@ $maxPriceProduct;
 $minPrice;
 $minPriceProduct;
 
-$av = ($price1 + $price2 + $price3)/3;
-echo "$product1 => $price1<br>";
-echo "$product2 => $price2<br>";
-echo "$product3 => $price3<br>";
-echo "_____________________________ <br><br>";
-
 if ($price1>$price2 && $price1>$price3) {
     $maxPriceProduct = $product1;
     $maxPrice = $price1;
