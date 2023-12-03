@@ -8,6 +8,11 @@ $price1 = 300;
 $price2 = 150;
 $price3 = 260;
 
+echo "$product1 => $price1<br>";
+echo "$product2 => $price2<br>";
+echo "$product3 => $price3<br>";
+echo "_____________________________ <br><br>";
+
 $maxPrice;
 $maxPriceProduct;
 $minPrice;
@@ -39,3 +44,4 @@ echo "самый дорогой $maxPriceProduct (он стоит $maxPrice ру
 echo "самый дешёвый $minPriceProduct (он стоит $minPrice руб)";
 
 ?>
+

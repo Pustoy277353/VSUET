@@ -12,7 +12,7 @@
     <div id="vote">
         <p>Как вы оцениваете наш магазин?
         <p>
-        <form action="" method="post">
+        <form method="post">
             <input type="radio" name="vote" value="5" checked> Отлично<br>
             <input type="radio" name="vote" value="4"> Хорошо<br>
             <input type="radio" name="vote" value="3"> Удовлетворительно<br>
@@ -25,7 +25,6 @@
         <p>Результаты голосования:</p>
         <?php
         if (@$_POST['vote']) {
-            // Если параметр vote передается методом POST, значит, нажата кнопка "Проголосовать"
             $file = $_POST['vote'] . ".txt";
             // В переменной vote содержится число 2, 3, 4 или 5. Наши файлы имеют такие же
             // названия, значит, мы можем использовать эти значения для выбора файла,
